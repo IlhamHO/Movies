@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <form class="container-fluid justify-content-start">
+            <button class="btn btn-outline-success me-2" type="button">Movies</button>
+            <button class="btn btn-sm btn-outline-secondary" type="button" >Add New Movie</button>
+        </form>
+    </nav>
+    <div class="container">
+        <h1 class="card-title">Movies List</h1>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Summary</th>
+                <th>Date</th>
+                <th>Actors</th>
+                <th>Authors</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="m : ${moviesList}">
+                <td th:text="${m.id}"></td>
+                <td th:text="${m.name}"></td>
+                <td th:text="${m.summary}"></td>
+                <td th:text="${m.date}"></td>
+                <td th:text="${m.actors}"></td>
+                <td th:text="${m.authors}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
