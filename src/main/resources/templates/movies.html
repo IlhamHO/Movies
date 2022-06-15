@@ -74,7 +74,7 @@
 <div class="container">
     <ul class="nav nav-pills" >
         <li class="nav-item" th:class="${currentPage}==${status.index}?'nav-link active':''" th:each="pa,status:${pages}" >
-            <a class="nav-link" th:href="@{index(page=${status.index},size=${size},keyword=${keyword})}" th:text="${status.index}"></a>
+            <button type="button" class="btn btn-light"><a class="nav-link" th:href="@{index(page=${status.index},size=${size},keyword=${keyword})}" th:text="${status.index}"></a></button>
         </li>
     </ul>
 </div>
