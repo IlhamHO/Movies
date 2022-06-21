@@ -32,6 +32,6 @@ public class MoviesApplication implements CommandLineRunner {
 		movies.add(new Movie(null,"Les Sentiers de la gloire","Durant la Première Guerre mondiale, le général français Mireau lance une offensive suicidaire contre une position allemande imprenable. Au moment de l'attaque, les soldats tombent par dizaines et leurs compagnons refusent d'avancer...",2011,"Avec Kirk Douglas, Ralph Meeker, Adolphe Menjou","Stanley Kubrick"));
 		movies.add(new Movie(null,"La Grande Vadrouille","En 1942, un avion anglais est abattu par les Allemands au-dessus de Paris. Les trois pilotes sautent en parachute et atterrissent dans différents endroits de la capitale",2016,"Bourvil, Louis de Funès, Claudio Brook"," Gérard Oury"));
 		movies.add(new Movie(null,"La Nuit du chasseur","Un prêcheur inquiétant poursuit dans l'Amérique rurale deux enfants dont le père vient d'être condamné pour vol et meurtre. Avant son incarcération, le père leur avait confié dix mille dollars, dont ils ne doivent révéler l'existence à personne...",2011,"obert Mitchum, Shelley Winters, Lillian Gish","harles Laughton"));
-		movieRepository.saveAll(movies);
+//	    movieRepository.saveAll(movies);
 	}
 }
