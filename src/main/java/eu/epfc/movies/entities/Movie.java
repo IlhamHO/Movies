@@ -1,14 +1,12 @@
 package eu.epfc.movies.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@SequenceGenerator(name = "MOVIE_SEQ", sequenceName = "MOVIE_SEQ", allocationSize = 1)
 public class Movie {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "MOVIE_SEQ")
     private Long id;
     private String name;
     private String summary;
@@ -74,17 +72,5 @@ public class Movie {
 
     public void setAuthors(String authors) {
         this.authors = authors;
-    }
-
-    @Override
-    public String toString() {
-        return "Movie{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", summary='" + summary + '\'' +
-                ", date=" + date +
-                ", actors='" + actors + '\'' +
-                ", authors='" + authors + '\'' +
-                '}';
     }
 }
